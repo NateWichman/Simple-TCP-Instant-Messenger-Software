@@ -52,7 +52,7 @@ public class ClientLab3{
 		//Sending information out the print stream
 		out.println(userInput);
 		System.out.print ("Input: ");
-		if(userInput.equals("Exit")){
+		if(userInput.equals("Quit")){
 		    break;
 		}
 		} 
@@ -83,7 +83,10 @@ class receiveThread2 extends Thread{
 		while((inputLine = in.readLine()) != null){
 			System.out.println("Server: " + inputLine);
 
-			if(inputLine.equals("Exit")){
+			if(inputLine.equals("Quit")){
+				//I had issues with just the break for some reason, so I switched it to 
+				//System.exit instead to bypass the issue. I still need to figure out why
+				//it wasnt working. 
 				System.exit(0);
 				break;
 			}
