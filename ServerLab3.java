@@ -83,7 +83,7 @@ class receiveThread extends Thread{
 		    { 
 			System.out.println ("Client: " + inputLine); 
 
-			if (inputLine.equals("Exit")){
+			if (inputLine.equals("Quit")){
 			    //I had issues with this closing properally with just
 			    //the break, so I used System.exit to bypass that
 			    //problem
@@ -122,7 +122,7 @@ class sendThread extends Thread{
 			while((outputLine = stdIn.readLine()) != null){
 				out.println(outputLine);
 				System.out.print("Input: ");
-				if(outputLine.equals("Exit")){
+				if(outputLine.equals("Quit")){
 					break;
 				}
 			}
